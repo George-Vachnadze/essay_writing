@@ -1,0 +1,23 @@
+body {
+	background-image: url("images/background.png");
+}
+.brick {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+.main_divider {
+	border: 1px dashed gray;
+}
+.second_divider {
+	border: 1px solid black;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+.center_element {
+	text-align: center;
+}
+.right_element {
+	text-align: right;
+}

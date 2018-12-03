@@ -1,0 +1,15 @@
+.menu_button {
+	padding: 20px;
+	cursor: pointer;
+	outline: none;
+	background-color: #ffe0cc;
+	border: none;
+	border-radius: 100px;
+	margin: 5px 5px 5px 5px;
+}
+.menu_button:hover {
+	background-color: #ffc299;
+}
+.menu_button:active {
+	transform: translateY(5px);
+}

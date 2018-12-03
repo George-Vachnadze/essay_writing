@@ -1,0 +1,75 @@
+<head>
+	<title>დაგვიკავშირდი</title>
+	<!-- Meta -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- OG Meta -->
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="#"/>
+		<meta property="og:title" content="#"/>
+		<meta property="og:description" content="#"/>
+	<!-- Style -->
+		<link rel="icon" href="images/contact.png">
+		<link rel="stylesheet" href="structure.css">
+		<link rel="stylesheet" href="menu_buttons.css">
+		<link rel="stylesheet" href="font_style.css">
+		<link rel="stylesheet" href="contact_form.css">
+	<!-- Scripts -->
+		<script src="scripts/onLoad.js"></script>
+		<script src="scripts/contact_form.js"></script>
+</head>
+<body onload="onLoad()">
+	<div class="brick">
+		<div id="header" class="center_element">
+			<a href="#"><img src="images/contact.png" alt="Site_Logo" height="50" width="50"></a>
+		</div>
+	</div>
+	<hr class="second_divider">
+	<hr class="main_divider">
+	<hr class="second_divider">
+	<div class="brick">
+		<div class="center_element">
+			<button class="menu_button" onclick="location.href='index.html'"><img src="images/home.png" alt="home" width="50" height="50"></button>
+			<button class="menu_button" onclick="location.href='read.html'"><img src="images/read.png" alt="read" width="50" height="50"></button>
+			<button class="menu_button" onclick="location.href='write.html'"><img src="images/write.png" alt="write" width="50" height="50"></button>
+			<button class="menu_button" onclick="location.href='contact.html'"><img src="images/contact.png" alt="contact" width="50" height="50"></button>
+		</div>
+	</div>
+	<hr class="second_divider">
+	<hr class="main_divider">
+	<hr class="second_divider">
+	<div class="brick">
+		<div>
+			<!-- Facebook and other contact information will go here. -->
+		</div>
+		<div class="contactform" id="contactform">
+			<form name="form" onSubmit="HideForm();">
+				<input type="text" name="name" placeholder="სახელი" required>
+				<input type="email" name="email" placeholder="ელ. ფოსტის მისამართი" required>
+				<textarea name="subject" placeholder="თქვენი შეტყობინება" style="height:200px" required></textarea>
+				<div class="center_element">
+					<button type="submit" class="menu_button"><img src="images/send.png" alt="contact" width="50" height="50"></button>
+				</div>
+			</form>
+		</div>
+		<div id="result"></div>
+		<script>
+		// Send data to Google Spreadsheet using Macro
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbzoRdeGTvsjWMYpdDaK0ybRSJakfHka5jJa5npoYR3pj2U1ncg/exec'
+			const form = document.forms['form']
+		// Console Log Success / Error
+			form.addEventListener('submit', e => {
+				e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => console.log('Success!', response))
+				.catch(error => console.error('Error!', error.message))
+			})
+		</script>
+	</div>
+	<hr class="second_divider">
+	<hr class="main_divider">
+	<hr class="second_divider">
+	<div class="brick">
+		<div id="footer" class="center_element"></div>
+	</div>
+</body>
