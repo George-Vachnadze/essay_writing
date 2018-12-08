@@ -1,3 +1,4 @@
 ﻿function onLoad() {
 	document.getElementById("footer").innerHTML = '<p class="center_element">Copyright © 2019 Website.ge</p>';
+	document.getElementById("menu").innerHTML = '<div class="center_element"><button class="menu_button" onclick="location.href=\'index.html\'"><img src="images/home.png" alt="home" width="50" height="50"></button><button class="menu_button" onclick="location.href=\'read.html\'"><img src="images/read.png" alt="read" width="50" height="50"></button><button class="menu_button" onclick="location.href=\'write.html\'"><img src="images/write.png" alt="write" width="50" height="50"></button><button class="menu_button" onclick="location.href=\'contact.html\'"><img src="images/contact.png" alt="contact" width="50" height="50"></button></div>';
 }
